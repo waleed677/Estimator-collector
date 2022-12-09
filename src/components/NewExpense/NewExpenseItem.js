@@ -5,12 +5,11 @@ function NewExpenseItem(props) {
 
     const submitDataHandler = (expenseData) => {
 
-        const newData = {
+        const newExpenseData = {
             ...expenseData,
-            id: Math.random()
+            id: Math.floor(Math.random() * 100) + 1
         }
-        console.log({newData});
-        props.onSubmitData(expenseData);
+        props.onSubmitData(newExpenseData);
     };
 
 

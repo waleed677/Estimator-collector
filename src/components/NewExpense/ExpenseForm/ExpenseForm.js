@@ -21,7 +21,7 @@ function ExpenseForm(props) {
 
     const dateHandler = (event) => {
         setEnteredData((prevState) => {
-            return {...prevState, date:event.target.value}
+            return {...prevState, date: new Date(event.target.value)}
         });
     }
 
@@ -42,7 +42,7 @@ function ExpenseForm(props) {
                 <div className="space-y-6 px-4 py-5 sm:p-6">
                     <div className="grid grid-cols-4 gap-6">
                         <div className="col-span-2 sm:col-span-2">
-                            <label for="company-website" className="block text-3xl font-medium text-black-700">Title</label>
+                            <label  className="block text-3xl font-medium text-black-700">Title</label>
                             <div className="mt-1 flex rounded-md ">
                                 <input type="text"
                                     className="block w-full flex-1 text-4xl rounded-md p-1"
@@ -52,7 +52,7 @@ function ExpenseForm(props) {
                             </div>
                         </div>
                         <div className="col-span-2 sm:col-span-2">
-                            <label for="company-website" className="ock text-3xl font-medium text-black-700">Price</label>
+                            <label  className="ock text-3xl font-medium text-black-700">Price</label>
                             <div className="mt-1 flex rounded-md ">
                                 <input type="number"
                                     className="block w-full flex-1 text-4xl rounded-md p-1"
@@ -62,7 +62,7 @@ function ExpenseForm(props) {
                             </div>
                         </div>
                         <div className="col-span-2 sm:col-span-2">
-                            <label for="company-website" className="ock text-3xl font-medium text-black-700">Price</label>
+                            <label  className="ock text-3xl font-medium text-black-700">Price</label>
                             <div className="mt-1 flex rounded-md ">
                                 <input type="date"
                                     className="block w-full flex-1 text-4xl rounded-md p-1"

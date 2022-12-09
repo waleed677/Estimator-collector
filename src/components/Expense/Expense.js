@@ -7,7 +7,11 @@ function Expense(props) {
     <>
         <Card className ="p-6 mx-auto max-w-7xl mt-16 bg-card">
             {props.item.map((expense) => (
-                <ExpenseItem data = {expense} />
+                <ExpenseItem
+                  key = {expense.id} 
+                  data = {expense} 
+
+                />
             ))}
         </Card>
     </>

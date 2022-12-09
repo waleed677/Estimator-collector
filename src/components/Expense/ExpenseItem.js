@@ -4,7 +4,6 @@ import ExpenseDate from './ExpenseDate'
 
 function ExpenseItem(props) {
 
-
   return (
     <>
         <Card className ="flex justify-between  bg-gray-700 mt-4 p-3">
