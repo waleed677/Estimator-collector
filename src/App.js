@@ -5,6 +5,10 @@ import NewExpenseItem from './components/NewExpense/NewExpenseItem';
 
 function App() {
 
+  const submitDataHandler = (expenseData) => {
+    console.log("In App.js", expenseData);
+};
+
   const expenses = [
     {
       date: new Date('2022-12-09'),  
@@ -25,8 +29,8 @@ function App() {
 
   return (
     <>
-    <NewExpenseItem />
-    <Expense item = {expenses}/>
+    <NewExpenseItem onSubmitData = {submitDataHandler}/>
+    <Expense  item = {expenses}/>
     </>
   );
 }

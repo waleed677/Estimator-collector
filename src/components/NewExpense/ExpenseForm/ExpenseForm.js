@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function ExpenseForm() {
+function ExpenseForm(props) {
 
     const [enteredData, setEnteredData] = useState({
         title: '',
@@ -27,7 +27,7 @@ function ExpenseForm() {
 
     const submitHandler = (event) => {
         event.preventDefault();
-        console.log({enteredData})
+        props.onSubmitDate(enteredData);
         setEnteredData({
             title: '',
             price: '',
