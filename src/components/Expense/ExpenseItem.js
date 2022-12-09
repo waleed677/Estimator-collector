@@ -12,7 +12,7 @@ function ExpenseItem(props) {
             <div className='p-8 items-center'>
             <h2 className="text-white text-2xl font-bold">{props.data.title}</h2>
             </div>
-            <div className='bg-purple-800 rounded-lg p-8 py-5 mt-5 h-16'>
+            <div className='bg-violet-900 rounded-lg p-8 py-5 mt-5 h-16'>
             <p className="text-white text-2xl font-bold">${props.data.price}</p>
             </div>
         </Card>
