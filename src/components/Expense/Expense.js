@@ -5,7 +5,7 @@ import ExpenseItem from './ExpenseItem'
 function Expense(props) {
   return (
     <>
-        <Card className ="p-6 bg-black mx-auto max-w-7xl mt-64 ">
+        <Card className ="p-6 mx-auto max-w-7xl mt-64 bg-card">
             {props.item.map((expense) => (
                 <ExpenseItem data = {expense} />
             ))}
