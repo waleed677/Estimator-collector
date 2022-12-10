@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 
-function ExpenseFilter() {
-
-    const [selectedYear, setSelectedYear] = useState('')
+function ExpenseFilter(props) {
 
     const filterHandler = (event) => {
-        setSelectedYear(event.target.value);
+        props.onChangeFilter(event.target.value);
     }
     return (
         <>
@@ -19,8 +17,8 @@ function ExpenseFilter() {
                     <select 
                     className=" block w-48 rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                     onChange={filterHandler}
+                    value = {props.selected}
                     >
-                        <option value={selectedYear} >Choose Year</option>
                         <option value="2019">2019</option>
                         <option value="2020">2020</option>
                         <option value="2021">2021</option>
